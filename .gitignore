@@ -1,4 +1,9 @@
-data/
-.env
+# Ignore Python environment files
+.venv/
 __pycache__/
+*.pyc
+
+# Ignore databases and generated data
+data/
+reports/
 *.db
