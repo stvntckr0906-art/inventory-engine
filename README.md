@@ -1,4 +1,5 @@
 Inventory Control Engine
+[View the Live Dashboard Here](https://your-custom-url.streamlit.app)
 
 A full-stack, data-driven dashboard for tracking warehouse stock levels, visualizing historical trends, and automating reorder alerts.
 
