@@ -45,12 +45,13 @@ current_date = start_date
 
 # Loop through each of the 30 days
 while current_date <= end_date:
-    for sku in current_stock.keys():
+    for sku, stock in current_stock.items():
                 # Step A: Record the stock level for the day
         conn.execute(
             "INSERT INTO inventory_levels VALUES (?, ?, ?)",
-            (current_date, sku, current_stock[sku]),
+            (current_date, sku, stock),
         )
+        records_created +=1
 
         # Step B: SImulate random daily sales (reduce the stock)
         daily_sales = random.randint(1, 12)
